@@ -1,26 +1,57 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 * {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+body {
+  background-image: linear-gradient(90deg, rgb(0, 196, 0), lightgreen);
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.search {
+  border: 2px solid black;
+  position: relative;
+  height: 50px;
+}
+
+.search input,
+.search button {
+  background-color: white;
+  border: 0;
+  height: 100%;
+  width: 50px; 
+}
+.search input {
+  font-size: 18px;
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+
+.search button {
+  cursor: pointer;
+  font-size: 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition:all 0.3s ease;
+}
+
+button:focus,
+input:focus {
+  outline: none;
+}
+
+.search.active input {
+  width: 200px;
+}
+
+.search.active button {
+  transform: translate(200px);
 }

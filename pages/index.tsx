@@ -1,8 +1,10 @@
 import type { NextPage } from "next";
+import { handleClick } from "../helpers/functions";
 import Head from "next/head";
 import { Fragment } from "react";
 
 const Home: NextPage = () => {
+  
   return (
     <Fragment>
       <Head>
@@ -22,8 +24,8 @@ const Home: NextPage = () => {
 
       <main>
         <div className="search">
-          <input type="text" className="input" placeholder="Search..." />
-          <button className="btn">
+          <input type="text" placeholder="Search..." />
+          <button onClick={handleClick}>
             <i className="fas fa-search"></i>
           </button>
         </div>
