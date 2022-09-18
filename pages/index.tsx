@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { handleClick } from "../helpers/functions";
+import { handleClick, getSearchElements } from "../helpers/functions";
 import Head from "next/head";
 import { Fragment } from "react";
 
@@ -21,8 +21,8 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <main>
+        <h1>Create A Hidden Search Bar</h1>
         <div className="search">
           <input type="text" placeholder="Search..." />
           <button onClick={handleClick}>
